@@ -1,1 +1,2 @@
 Hello world from NodeJS
+This is a new line added to the file
