@@ -9,4 +9,11 @@ const add = function sun(num1, num2) {
   return num1 + num2;
 };
 
-console.log(add(34, 687));
+function divide(x, y) {
+  if (y === 0) {
+    throw new Error("Cannot divide by Zero");
+  }
+  return x / y;
+}
+
+module.exports = { divide };
