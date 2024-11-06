@@ -50,6 +50,10 @@ fs.writeFile(asyncFile, "Hello, Async node js", (error) => {
     fs.appendFile(asyncFile, "\nAdded another line", (err) => {
       if (err) throw err;
       console.log("New line Added");
+      fs.readFile(asyncFile, "utf8", (err, updatedData) => {
+        if (err) throw err;
+        console.log("Updated file content", updatedData);
+      });
     });
   });
 });
