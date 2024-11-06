@@ -10,5 +10,6 @@ console.log("Joined path", joinPath);
 const resolvePath = path.resolve("user", "documents", "node", "projects");
 console.log("Resolved path", resolvePath);
 
+//Normalize
 const normalizePath = path.normalize("/user/.documents/../node/projects");
 console.log("NormalizedPath", normalizePath);
