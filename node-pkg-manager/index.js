@@ -7,6 +7,7 @@ console.log("File extension:", path.extname(__filename));
 const joinPath = path.join("/user", "documents", "node", "projects");
 console.log("Joined path", joinPath);
 
+// resolve
 const resolvePath = path.resolve("user", "documents", "node", "projects");
 console.log("Resolved path", resolvePath);
 
