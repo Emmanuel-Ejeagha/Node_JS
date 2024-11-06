@@ -17,6 +17,7 @@
 // console.log("NormalizedPath", normalizePath);
 
 // // FILE SYSTEM
+const { error } = require("console");
 const fs = require("fs");
 const path = require("path");
 
@@ -37,3 +38,18 @@ console.log("File content:", readContent);
 
 fs.appendFileSync(filePath, "\nThis is a new line added to the file");
 console.log("new line added");
+
+// Async way of creating the file
+const asyncFile = path.join(myFolder, "async-example.txt");
+fs.writeFile(asyncFile, "Hello, Async node js", (error) => {
+  if (error) throw error;
+  console.log("Async file is created successfully");
+  fs.readFile(asyncFile, "utf8", (err, data) => {
+    if (err) throw err;
+    console.log("Async file content:", data);
+    fs.appendFile(asyncFile, "\nAdded another line", (err) => {
+      if (err) throw err;
+      console.log("New line Added");
+    });
+  });
+});
