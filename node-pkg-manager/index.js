@@ -31,3 +31,9 @@ const filePath = path.join(myFolder, "example.txt");
 // syn way of creating the file
 fs.writeFileSync(filePath, "Hello world from NodeJS");
 console.log("File created successfully");
+
+const readContent = fs.readFileSync(filePath, "utf8");
+console.log("File content:", readContent);
+
+fs.appendFileSync(filePath, "\nThis is a new line added to the file");
+console.log("new line added");
