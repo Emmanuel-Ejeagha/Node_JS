@@ -5,6 +5,7 @@ fs.readFile("input.txt", "utf8", (err, data) => {
     console.error("Error reading file", err);
     return;
   }
+
   const modifyFileData = data.toUpperCase();
   fs.writeFile("output.txt", modifyFileData, (err) => {
     if (err) {
