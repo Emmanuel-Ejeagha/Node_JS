@@ -4,7 +4,7 @@ const port = 3000;
 
 //  root route
 app.get("/", (req, res) => {
-  res.send("Welcome to our home page");
+  res.send("Welcome to the home page");
 });
 
 // to get all product
