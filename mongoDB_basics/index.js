@@ -62,8 +62,8 @@ async function runQueryExamples() {
     // console.log(sortedUsers);
     // const countDocuments = await User.countDocuments({ isActive: true });
     // console.log(countDocuments);
-    // const deletedUser = await User  .findByIdAndDelete(newUser._id)
-    // console.log(deletedUser);
+    const deletedUser = await User.findByIdAndDelete(newUser._id);
+    console.log(deletedUser);
   } catch (error) {
     console.log("Error ->", error);
   } finally {
